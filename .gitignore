@@ -1,1 +1,8 @@
+# Rust
 /target
+
+# SQLite database file
+database.db
+
+# Environment variables
+.env
