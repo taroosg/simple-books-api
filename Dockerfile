@@ -4,6 +4,7 @@ FROM rust:bookworm AS builder
 WORKDIR /app
 COPY . .
 RUN cargo build --release
+RUN cargo install sqlx-cli --no-default-features --features sqlite,rustls
 
 # Final run stage
 FROM debian:bookworm-slim AS runner
